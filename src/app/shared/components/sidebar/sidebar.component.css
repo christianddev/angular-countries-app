@@ -1,0 +1,14 @@
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  cursor: pointer;
+  list-style: none;
+  text-align: left;
+}
+
+.active {
+  color: indianred;
+}
