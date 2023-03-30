@@ -1,11 +1,16 @@
 <h4>By Region</h4>
 <hr>
 <div class="row">
-  <div class="col"></div>
-  <app-search-box (onValue)="searchByRegion($event)" placeholder="search by region" />
+  <div class="col">
+    <button class="btn m-3" *ngFor="let region of regions" (click)="searchByRegion(region)"
+      [ngClass]="{ 'activeButton': selectedRegion === region}">
+      {{region}}
+    </button>
+  </div>
 </div>
 <div class="row">
   <div class="col">
+    <app-loading *ngIf="isLoading" />
     <app-country-table [countries]="countries" />
   </div>
 </div>

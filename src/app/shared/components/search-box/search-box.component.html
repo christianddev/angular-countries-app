@@ -1,1 +1,2 @@
-<input type="text" #inputSearch [placeholder]="placeholder" (keyup.enter)="searchByCapital()" />
+<input [value]="defaultSearchTerm" type="text" #inputSearch [placeholder]="placeholder"
+  (keyup)="onKeyPress(inputSearch.value)" />

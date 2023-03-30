@@ -1,0 +1,8 @@
+p {
+  position: fixed;
+  bottom: 15px;
+  right: 30px;
+  color: red;
+  font-weight: bold;
+  float: right;
+}
