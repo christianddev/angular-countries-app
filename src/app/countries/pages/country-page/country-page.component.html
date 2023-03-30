@@ -1,1 +1,30 @@
-<p>country-page works!</p>
+<ng-template #loadingMessage>
+  <p>Wait...</p>
+</ng-template>
+
+<div *ngIf="country && !loading; else loadingMessage">
+
+  <img [src]="country.flags.svg" [alt]="country.name.official" />
+  <p>
+    Flag
+    <strong>{{country.flag}}</strong>
+  </p>
+  <p>
+    Capital
+    <strong>{{country.capital}}</strong>
+  </p>
+  <p>
+    Name
+    <strong>{{country.name.official}}</strong>
+  </p>
+  <p>
+    Population
+    <strong>{{country.population |number}}</strong>
+  </p>
+  <p>translations</p>
+  <ul>
+    <li *ngFor="let translation of allTranslations">
+      {{translation.official}}
+    </li>
+  </ul>
+</div>
